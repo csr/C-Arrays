@@ -57,7 +57,7 @@ void inserimentoDiUnSoloDatoDataRigaColonnaMatrice(int matrice[][100], int numer
     printf("Ho inserito %d alla posizione (%d, %d).\n", matrice[numeroColonnaElemento][numeroRigaElemento], numeroColonnaElemento, numeroRigaElemento);
 }
 
-void bubbleSort(int vettore[], int numeroRiga, int numeroColonne) {
+void bubbleSort(int vettore[], int numeroColonne) {
     int tmp, i = 0;
     for (i = 0; i < numeroColonne-1; i++) {
         if (vettore[i] > vettore[i+1]) {
@@ -71,7 +71,7 @@ void bubbleSort(int vettore[], int numeroRiga, int numeroColonne) {
 void ordinamentoElementiRigaMatriceDatoIndice(int matrice[][100], int numeroColonne, int numeroRighe) {
     printf("Inserisci l'indice della riga di cui vuoi ordinare gli elementi: ");
     int numeroRiga = acquisisciNumeroCompresoTraValori(0, numeroRighe);
-    bubbleSort(matrice[numeroRiga], numeroRiga, numeroColonne);
+    bubbleSort(matrice[numeroRiga], numeroColonne);
     printf("Ho ordinato gli elementi della %da riga.\n", numeroRiga+1);
 }
 
